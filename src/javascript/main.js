@@ -13,32 +13,33 @@ isDone: by default is set by false
 //Posting Time Table Here!
 function PostTimeTableDetails() {
 
- const TimeTable = []
- //Time Table Inp Element........
- const TimeTableInput = document.getElementById("TimeTableInput").value
+  const TimeTable = []
+  //Time Table Inp Element........
+  const TimeTableInput = document.getElementById("TimeTableInput").value
 
- //checking if the use has put anything in the input
- if (TimeTable) {
+  //checking if the use has put anything in the input
+  if (TimeTable) {
 
-  TimeTable.unshift(
-   {
-    id: (TimeTable.length + 1),
-    TimeTableItem: TimeTableInput,
-    isDone: false
-   }
-  )
+    TimeTable.unshift(
+      {
+        id: (TimeTable.length + 1),
+        TimeTableItem: TimeTableInput,
+        isDone: false
+      }
+    )
 
- }
- var TimeTableDisplayElement = document.getElementById("time_table_list_dropdown")
+  }
+  var TimeTableDisplayElement = document.getElementById("time_table_list_dropdown")
 
- for (var i = 0; i < TimeTable.length; i++) {
+  for (var i = 0; i < TimeTable.length; i++) {
 
-  var row =
-   `<p id="ue9qfqn9ebg">
+    var row =
+      `<p id="ue9qfqn9ebg">
 
-${TimeTable[i].TimeTableItem}
+      ${TimeTable.sort()[i].TimeTableItem}
+
  
-  </p>`
-  TimeTableDisplayElement.innerHTML += row
- }
+     </p>`
+    TimeTableDisplayElement.innerHTML += row
+  }
 }

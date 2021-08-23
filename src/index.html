@@ -9,18 +9,24 @@
 </header>
 
 
-<body style="background-color: darkgray;">
+<body id="TimeTableBackground">
 
- <h1>Time Table</h1>
+ <h1 id="TimeTableTitle">Time Table</h1>
 
- <input id="TimeTableInput" type="text" style="width:400px;" />
+ <div style="margin-left:500px">
+  <input id="TimeTableInput" type="text" style="width:400px;" />
 
- <!--Button to add item to the time table...-->
- <button id="TimeTableAddButton" type="submit" onclick="PostTimeTableDetails()">
-  <p>Add Item</p>
- </button>
+  <!--Button to add item to the time table...-->
+  <button id="TimeTableAddButton" type="submit" onclick="PostTimeTableDetails()">
+   <p>Add Item</p>
+  </button>
+ </div>
 
- <div id="time_table_list_dropdown" style="top: 100px;"></div>
+ <div id="time_table_list_dropdown" style="margin-top: 10px;margin-left: 700px;">
+
+
+
+ </div>
 </body>
 
 <!--Inserting a javascript file for the backend functionality-->
